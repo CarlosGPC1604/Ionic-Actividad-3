@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ejercicio2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngFor="let contacto of contactos">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img alt="Foto de perfil de {{ contacto.nombre }}" src="https://avatar.iran.liara.run/public/{{contacto.id}}"/>
+      </ion-avatar>
+
+      <ion-card style="width: 100%;">
+        <ion-card-header>
+          <ion-card-title>{{contacto.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p><b>id: </b> {{contacto.id}}.</p>
+          <p><b>Puesto: </b> {{contacto.puesto}}.</p>
+          <p><b>Teléfono: </b> {{contacto.telefono}}.</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </div>
+</ion-content>
