@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Películas Populares</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngFor="let pelicula of peliculas">
+    <ion-card class="custom-card">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + pelicula.poster_path" alt="{{ pelicula.title }}">
+      <ion-card-header>
+        <ion-card-title>{{ pelicula.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ pelicula.overview }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
